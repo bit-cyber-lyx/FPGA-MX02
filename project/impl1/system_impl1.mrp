@@ -1,0 +1,1722 @@
+
+          Lattice Mapping Report File for Design Module 'system_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 5 -oc Commercial
+     system_impl1.ngd -o system_impl1_map.ncd -pr system_impl1.prf -mp
+     system_impl1.mrp -lpf G:/fpga/MXO2/system/project/impl1/system_impl1.lpf
+     -lpf G:/fpga/MXO2/system/project/system.lpf -c 0 -gui -msgset
+     G:/fpga/MXO2/system/project/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   5
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  02/25/21  11:56:09
+
+Design Summary
+--------------
+
+   Number of registers:   1638 out of  4635 (35%)
+      PFU registers:         1638 out of  4320 (38%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:      1180 out of  2160 (55%)
+      SLICEs as Logic/ROM:   1180 out of  2160 (55%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        135 out of  2160 (6%)
+   Number of LUT4s:        2337 out of  4320 (54%)
+      Number used as logic LUTs:        2067
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      270
+      Number used as shift registers:     0
+   Number of PIO sites used: 28 + 4(JTAG) out of 105 (30%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  3
+     Net clk_c: 865 loads, 865 rising, 0 falling (Driver: PIO clk )
+     Net DS18B20Z_inst/clk_1mhz: 2 loads, 2 rising, 0 falling (Driver:
+     DS18B20Z_inst/clk_1mhz_194 )
+
+                                    Page 1
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Design Summary (cont)
+---------------------
+     Net time_generator_inst/clk_5hz: 15 loads, 15 rising, 0 falling (Driver:
+     time_generator_inst/i21483_4_lut )
+   Number of Clock Enables:  91
+     Net clk_c_enable_1433: 2 loads, 2 LSLICEs
+     Net clk_c_enable_132: 1 loads, 1 LSLICEs
+     Net clk_c_enable_1437: 2 loads, 2 LSLICEs
+     Net clk_c_enable_686: 2 loads, 2 LSLICEs
+     Net clk_c_enable_931: 7 loads, 7 LSLICEs
+     Net clk_c_enable_1439: 2 loads, 2 LSLICEs
+     Net clk_c_enable_117: 1 loads, 1 LSLICEs
+     Net clk_c_enable_659: 306 loads, 306 LSLICEs
+     Net clk_c_enable_1399: 6 loads, 6 LSLICEs
+     Net time_generator_inst/time_out_15__N_118: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_11: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_c_enable_682: 13 loads, 13 LSLICEs
+     Net time_generator_inst/clk_c_enable_750: 1 loads, 1 LSLICEs
+     Net time_generator_inst/time_out_23__N_98: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_c_enable_118: 1 loads, 1 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_4: 2 loads, 2 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_7: 2 loads, 2 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_14: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1452: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1359: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_690: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_702: 5 loads, 5 LSLICEs
+     Net OLED12832_inst/clk_c_enable_10: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1352: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_114: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1431: 6 loads, 6 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1432: 4 loads, 4 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1446: 4 loads, 4 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1374: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1401: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/clk_c_enable_694: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1421: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1423: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1427: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1436: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1429: 1 loads, 1 LSLICEs
+     Net clk_c_enable_684: 1 loads, 1 LSLICEs
+     Net clk_c_enable_688: 2 loads, 2 LSLICEs
+     Net piano_out_I_0/clk_c_enable_799: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_899: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_950: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1000: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1200: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_849: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1050: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1100: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1150: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1250: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1304: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1414: 26 loads, 26 LSLICEs
+     Net uart_top_inst/clk_c_enable_1418: 3 loads, 3 LSLICEs
+     Net uart_top_inst/bps_en_N_2978: 4 loads, 4 LSLICEs
+     Net uart_top_inst/rx_done_N_2858: 14 loads, 14 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Design Summary (cont)
+---------------------
+     Net uart_top_inst/tx_done: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_tx_ins/clk_c_enable_1358: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_tx_ins/clk_c_enable_687: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_743: 4 loads, 4 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1362: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_rx_ins/bps_en_N_2945: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1404: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1406: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1405: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1403: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1379: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1402: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1407: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1408: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/one_wire_N_510: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_748: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_709: 4 loads, 4 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_717: 5 loads, 5 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_736: 10 loads, 10 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_26: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_83: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_86: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_201: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_614: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_545: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_553: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_557: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1416: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_634: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_683: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1420: 3 loads, 3 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1372: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_689: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_747: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1426: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1422: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1447: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1371: 1 loads, 1 LSLICEs
+   Number of LSRs:  44
+     Net n25765: 2 loads, 2 LSLICEs
+     Net n20945: 1 loads, 1 LSLICEs
+     Net ready: 1 loads, 1 LSLICEs
+     Net time_generator_inst/n5004: 5 loads, 5 LSLICEs
+     Net time_generator_inst/n5006: 5 loads, 5 LSLICEs
+     Net time_generator_inst/clk_c_enable_750: 13 loads, 13 LSLICEs
+     Net time_generator_inst/cnt_2__N_88: 2 loads, 2 LSLICEs
+     Net time_generator_inst/n5002: 5 loads, 5 LSLICEs
+     Net flag: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/n12055: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/n12049: 5 loads, 5 LSLICEs
+     Net OLED12832_inst/n14556: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12042: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12039: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12024: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/n12017: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/n16664: 1 loads, 1 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Design Summary (cont)
+---------------------
+     Net OLED12832_inst/n12019: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12116: 1 loads, 1 LSLICEs
+     Net piano_out_I_0/n25588: 13 loads, 13 LSLICEs
+     Net piano_out_I_0/n12089: 3 loads, 3 LSLICEs
+     Net piano_out_I_0/n2025: 10 loads, 10 LSLICEs
+     Net uart_top_inst/n26798: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26802: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26804: 26 loads, 26 LSLICEs
+     Net uart_top_inst/rx_done: 14 loads, 14 LSLICEs
+     Net uart_top_inst/n26803: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26797: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26794: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26799: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26805: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26801: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26800: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26795: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26796: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n12084: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_tx_ins/n12038: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_rx_ins/n12037: 2 loads, 2 LSLICEs
+     Net uart_top_inst/baud_tx_ins/cnt_12__N_2896: 7 loads, 7 LSLICEs
+     Net uart_top_inst/baud_rx_ins/cnt_12__N_2896: 7 loads, 7 LSLICEs
+     Net DS18B20Z_inst/n12075: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n12080: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n15328: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n14905: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n26793: 621 loads
+     Net n1359: 331 loads
+     Net n1355: 325 loads
+     Net n1358: 325 loads
+     Net n1357: 308 loads
+     Net clk_c_enable_659: 306 loads
+     Net n1354: 175 loads
+     Net n1356: 94 loads
+     Net OLED12832_inst/cnt_scan_0: 93 loads
+     Net OLED12832_inst/state_0: 83 loads
+
+
+
+
+   Number of warnings:  3
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Converting L6MUX21 OLED12832_inst/i21051/GATE to normal MUX21.
+WARNING - map: Converting L6MUX21 OLED12832_inst/mux_131_Mux_0_i30/GATE to
+     normal MUX21.
+WARNING - map: Converted 2 L6MUX21's to normal MUX21.
+
+
+
+                                    Page 4
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| rs232_rx            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key[0]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key[1]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| key[2]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rst_n               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_dat            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_clk            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_dcn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_rst            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_csn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| piano_out           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rs232_tx            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| en                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led2[0]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| one_wire            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led2[2]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led1[0]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led1[1]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led1[2]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 5
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rgb_led2[1]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i22683 undriven or does not drive anything - clipped.
+Signal n5709 was merged into signal DS18B20Z_inst/one_wire_N_502
+Signal piano_out_I_0/Beeper_inst/n25816 was merged into signal
+     piano_out_I_0/data_buffer_reg_4
+Signal OLED12832_inst/n25769 was merged into signal OLED12832_inst/cnt_main_4
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal DS18B20Z_inst/add_76_21/S1 undriven or does not drive anything - clipped.
+     
+Signal DS18B20Z_inst/add_76_21/CO undriven or does not drive anything - clipped.
+     
+Signal DS18B20Z_inst/sub_1360_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/add_76_1/S0 undriven or does not drive anything - clipped.
+Signal DS18B20Z_inst/add_76_1/CI undriven or does not drive anything - clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+
+                                    Page 6
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Removed logic (cont)
+--------------------
+Signal DS18B20Z_inst/sub_1360_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal DS18B20Z_inst/sub_1360_add_2_21/CO undriven or does not drive anything -
+     clipped.
+Signal uart_top_inst/baud_rx_ins/cnt_1983_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/baud_rx_ins/cnt_1983_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/baud_rx_ins/cnt_1983_add_4_13/CO undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/baud_tx_ins/cnt_1985_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/baud_tx_ins/cnt_1985_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/baud_tx_ins/cnt_1985_add_4_13/CO undriven or does not drive
+     anything - clipped.
+Signal uart_top_inst/add_35_1/S0 undriven or does not drive anything - clipped.
+Signal uart_top_inst/add_35_1/CI undriven or does not drive anything - clipped.
+Signal uart_top_inst/add_35_11/S1 undriven or does not drive anything - clipped.
+     
+Signal uart_top_inst/add_35_11/CO undriven or does not drive anything - clipped.
+     
+Signal piano_out_I_0/Beeper_inst/time_cnt_1987_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal piano_out_I_0/Beeper_inst/time_cnt_1987_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal piano_out_I_0/Beeper_inst/time_cnt_1987_add_4_19/S1 undriven or does not
+     drive anything - clipped.
+Signal piano_out_I_0/Beeper_inst/time_cnt_1987_add_4_19/CO undriven or does not
+     drive anything - clipped.
+Signal piano_out_I_0/Beeper_inst/add_1033_1/S0 undriven or does not drive
+     anything - clipped.
+Signal piano_out_I_0/Beeper_inst/add_1033_1/CI undriven or does not drive
+     anything - clipped.
+Signal piano_out_I_0/Beeper_inst/add_1033_19/CO undriven or does not drive
+     anything - clipped.
+Signal piano_out_I_0/cnt_1981_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal piano_out_I_0/cnt_1981_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal piano_out_I_0/cnt_1981_add_4_25/S1 undriven or does not drive anything -
+     clipped.
+Signal piano_out_I_0/cnt_1981_add_4_25/CO undriven or does not drive anything -
+     clipped.
+Signal piano_out_I_0/data_length_reg_1982_add_4_1/S1 undriven or does not drive
+     anything - clipped.
+Signal piano_out_I_0/data_length_reg_1982_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Removed logic (cont)
+--------------------
+Signal piano_out_I_0/data_length_reg_1982_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal piano_out_I_0/data_length_reg_1982_add_4_11/CO undriven or does not drive
+     anything - clipped.
+Signal OLED12832_inst/sub_104_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_104_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_104_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_104_add_2_9/CO undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_79_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_79_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_79_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_79_add_2_9/CO undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_38_1/S0 undriven or does not drive anything - clipped.
+     
+Signal OLED12832_inst/add_38_1/CI undriven or does not drive anything - clipped.
+     
+Signal OLED12832_inst/add_2997_1/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_2997_1/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_2997_1/CI undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_38_17/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_38_17/CO undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_2997_7/CO undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_143_1/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_143_1/CI undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+
+                                    Page 8
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Removed logic (cont)
+--------------------
+Signal OLED12832_inst/sub_1361_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/sub_1361_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_143_17/S1 undriven or does not drive anything -
+     clipped.
+Signal OLED12832_inst/add_143_17/CO undriven or does not drive anything -
+     clipped.
+Signal time_generator_inst/add_6_1/S0 undriven or does not drive anything -
+     clipped.
+Signal time_generator_inst/add_6_1/CI undriven or does not drive anything -
+     clipped.
+Signal time_generator_inst/add_6_25/S1 undriven or does not drive anything -
+     clipped.
+Signal time_generator_inst/add_6_25/CO undriven or does not drive anything -
+     clipped.
+Block DS18B20Z_inst/i2929_1_lut was optimized away.
+Block piano_out_I_0/Beeper_inst/tone_4__I_0_26_Mux_15_i31_3_lut_4_lut_then_1_lut
+     was optimized away.
+Block OLED12832_inst/i17679_4_lut_4_lut_else_4_lut was optimized away.
+Block i1 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_n_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+
+                                    Page 9
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'rst_n_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 23 
+
+     Type and instance name of component: 
+   Register : DS18B20Z_inst/data_wr_i0_i7
+   Register : DS18B20Z_inst/data_wr_i0_i6
+   Register : DS18B20Z_inst/data_wr_i0_i1
+   Register : DS18B20Z_inst/data_wr_buffer_i0_i7
+   Register : DS18B20Z_inst/data_wr_buffer_i0_i6
+   Register : DS18B20Z_inst/data_wr_buffer_i0_i4
+   Register : DS18B20Z_inst/num_delay_i0_i0
+   Register : DS18B20Z_inst/num_delay_i0_i2
+   Register : DS18B20Z_inst/temperature_buffer_i0_i1
+   Register : DS18B20Z_inst/num_delay_i0_i12
+   Register : DS18B20Z_inst/temperature_buffer_i0_i2
+   Register : DS18B20Z_inst/temperature_buffer_i0_i3
+   Register : DS18B20Z_inst/temperature_buffer_i0_i4
+   Register : DS18B20Z_inst/num_delay_i0_i8
+   Register : DS18B20Z_inst/temperature_buffer_i0_i5
+   Register : DS18B20Z_inst/num_delay_i0_i6
+   Register : DS18B20Z_inst/num_delay_i0_i5
+   Register : DS18B20Z_inst/num_delay_i0_i4
+   Register : DS18B20Z_inst/num_delay_i0_i3
+   Register : DS18B20Z_inst/num_delay_i0_i1
+   Register : DS18B20Z_inst/temperature_buffer_i0_i6
+   Register : DS18B20Z_inst/temperature_buffer_i0_i7
+   Register : DS18B20Z_inst/temperature_buffer_i0_i0
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_n_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 843 
+
+     Type and instance name of component: 
+   Register : time_generator_inst/time_fen__i1
+   Register : time_generator_inst/time_miao__i1
+   Register : time_generator_inst/cnt_5hz__i0
+   Register : time_generator_inst/cnt__i0
+   Register : time_generator_inst/time_shi__i1
+   Register : time_generator_inst/flag_100
+   Register : time_generator_inst/time_fen__i8
+   Register : time_generator_inst/time_fen__i7
+   Register : time_generator_inst/time_fen__i6
+   Register : time_generator_inst/cnt_5hz__i23
+
+                                   Page 10
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : time_generator_inst/cnt_5hz__i22
+   Register : time_generator_inst/cnt_5hz__i21
+   Register : time_generator_inst/cnt_5hz__i20
+   Register : time_generator_inst/cnt_5hz__i19
+   Register : time_generator_inst/cnt_5hz__i18
+   Register : time_generator_inst/cnt_5hz__i17
+   Register : time_generator_inst/cnt_5hz__i16
+   Register : time_generator_inst/cnt_5hz__i15
+   Register : time_generator_inst/cnt_5hz__i14
+   Register : time_generator_inst/cnt_5hz__i13
+   Register : time_generator_inst/time_fen__i5
+   Register : time_generator_inst/cnt_5hz__i12
+   Register : time_generator_inst/cnt_5hz__i11
+   Register : time_generator_inst/time_fen__i4
+   Register : time_generator_inst/cnt_5hz__i10
+   Register : time_generator_inst/cnt_5hz__i9
+   Register : time_generator_inst/time_fen__i3
+   Register : time_generator_inst/cnt_5hz__i8
+   Register : time_generator_inst/cnt_5hz__i7
+   Register : time_generator_inst/time_fen__i2
+   Register : time_generator_inst/cnt_5hz__i6
+   Register : time_generator_inst/cnt_5hz__i5
+   Register : time_generator_inst/cnt_5hz__i4
+   Register : time_generator_inst/cnt_5hz__i3
+   Register : time_generator_inst/cnt_5hz__i2
+   Register : time_generator_inst/cnt_5hz__i1
+   Register : time_generator_inst/time_miao__i8
+   Register : time_generator_inst/time_miao__i7
+   Register : time_generator_inst/time_miao__i6
+   Register : time_generator_inst/time_miao__i5
+   Register : time_generator_inst/time_miao__i4
+   Register : time_generator_inst/time_miao__i3
+   Register : time_generator_inst/time_miao__i2
+   Register : time_generator_inst/cnt__i1
+   Register : time_generator_inst/cnt__i2
+   Register : time_generator_inst/time_shi__i2
+   Register : time_generator_inst/time_shi__i3
+   Register : time_generator_inst/time_shi__i4
+   Register : time_generator_inst/time_shi__i5
+   Register : time_generator_inst/time_shi__i6
+   Register : time_generator_inst/time_shi__i7
+   Register : time_generator_inst/time_shi__i8
+   Register : OLED12832_inst/cnt_delay_i0_i4
+   Register : OLED12832_inst/cnt_delay_i0_i3
+   Register : OLED12832_inst/cnt_delay_i0_i2
+   Register : OLED12832_inst/cnt_delay_i0_i1
+   Register : OLED12832_inst/num2_i0_i7
+   Register : OLED12832_inst/num2_i0_i6
+   Register : OLED12832_inst/num2_i0_i5
+   Register : OLED12832_inst/num2_i0_i4
+   Register : OLED12832_inst/num2_i0_i3
+   Register : OLED12832_inst/num2_i0_i2
+   Register : OLED12832_inst/num1_i0_i4
+   Register : OLED12832_inst/num1_i0_i2
+   Register : OLED12832_inst/num1_i0_i1
+   Register : OLED12832_inst/cnt_scan_i0_i0
+
+                                   Page 11
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : OLED12832_inst/cnt_main_1988__i0
+   Register : OLED12832_inst/cnt_scan_i0_i4
+   Register : OLED12832_inst/cnt_scan_i0_i3
+   Register : OLED12832_inst/cnt_scan_i0_i1
+   Register : OLED12832_inst/cnt_main_1988__i4
+   Register : OLED12832_inst/cnt_main_1988__i3
+   Register : OLED12832_inst/cnt_main_1988__i2
+   Register : OLED12832_inst/cnt_main_1988__i1
+   Register : OLED12832_inst/cnt_init_i0_i1
+   Register : OLED12832_inst/cnt_init_i0_i2
+   Register : OLED12832_inst/cnt_init_i0_i3
+   Register : OLED12832_inst/cnt_init_i0_i4
+   Register : OLED12832_inst/state_i0_i5
+   Register : OLED12832_inst/cnt_write_i0_i1
+   Register : OLED12832_inst/cnt_write_i0_i2
+   Register : OLED12832_inst/cnt_write_i0_i3
+   Register : OLED12832_inst/state_i0_i4
+   Register : OLED12832_inst/cnt_write_i0_i4
+   Register : OLED12832_inst/state_i0_i3
+   Register : OLED12832_inst/state_i0_i2
+   Register : OLED12832_inst/cnt_i0_i15
+   Register : OLED12832_inst/cnt_i0_i14
+   Register : OLED12832_inst/cnt_i0_i13
+   Register : OLED12832_inst/cnt_i0_i12
+   Register : OLED12832_inst/cnt_i0_i0
+   Register : OLED12832_inst/cnt_i0_i11
+   Register : OLED12832_inst/cnt_i0_i10
+   Register : OLED12832_inst/cnt_i0_i9
+   Register : OLED12832_inst/cnt_i0_i8
+   Register : OLED12832_inst/cnt_i0_i7
+   Register : OLED12832_inst/cnt_i0_i6
+   Register : OLED12832_inst/cnt_i0_i5
+   Register : OLED12832_inst/cnt_i0_i4
+   Register : OLED12832_inst/cnt_i0_i3
+   Register : OLED12832_inst/cnt_i0_i2
+   Register : OLED12832_inst/cnt_i0_i1
+   Register : OLED12832_inst/cnt_delay_i0_i0
+   Register : OLED12832_inst/num2_i0_i0
+   Register : OLED12832_inst/num1_i0_i0
+   Register : OLED12832_inst/cnt_write_i0_i0
+   Register : OLED12832_inst/cnt_delay_i0_i15
+   Register : OLED12832_inst/cnt_delay_i0_i14
+   Register : OLED12832_inst/cnt_delay_i0_i13
+   Register : OLED12832_inst/cnt_delay_i0_i12
+   Register : OLED12832_inst/cnt_delay_i0_i11
+   Register : OLED12832_inst/cnt_delay_i0_i10
+   Register : OLED12832_inst/cnt_delay_i0_i9
+   Register : OLED12832_inst/cnt_delay_i0_i8
+   Register : OLED12832_inst/cnt_delay_i0_i7
+   Register : OLED12832_inst/cnt_delay_i0_i6
+   Register : OLED12832_inst/cnt_delay_i0_i5
+   Register : piano_out_I_0/cnt_1981__i0
+   Register : piano_out_I_0/cnt_1981__i1
+   Register : piano_out_I_0/cnt_1981__i2
+   Register : piano_out_I_0/cnt_1981__i3
+   Register : piano_out_I_0/cnt_1981__i4
+
+                                   Page 12
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : piano_out_I_0/cnt_1981__i5
+   Register : piano_out_I_0/cnt_1981__i6
+   Register : piano_out_I_0/cnt_1981__i7
+   Register : piano_out_I_0/cnt_1981__i8
+   Register : piano_out_I_0/cnt_1981__i9
+   Register : piano_out_I_0/cnt_1981__i10
+   Register : piano_out_I_0/cnt_1981__i11
+   Register : piano_out_I_0/cnt_1981__i12
+   Register : piano_out_I_0/cnt_1981__i13
+   Register : piano_out_I_0/cnt_1981__i14
+   Register : piano_out_I_0/cnt_1981__i15
+   Register : piano_out_I_0/cnt_1981__i16
+   Register : piano_out_I_0/cnt_1981__i17
+   Register : piano_out_I_0/cnt_1981__i18
+   Register : piano_out_I_0/cnt_1981__i19
+   Register : piano_out_I_0/cnt_1981__i20
+   Register : piano_out_I_0/cnt_1981__i21
+   Register : piano_out_I_0/cnt_1981__i22
+   Register : piano_out_I_0/cnt_1981__i23
+   Register : piano_out_I_0/data_buffer_reg_i956
+   Register : piano_out_I_0/data_buffer_reg_i955
+   Register : piano_out_I_0/data_buffer_reg_i954
+   Register : piano_out_I_0/data_buffer_reg_i953
+   Register : piano_out_I_0/data_buffer_reg_i952
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i0
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i1
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i2
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i3
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i4
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i5
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i6
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i7
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i8
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i9
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i10
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i11
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i12
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i13
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i14
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i15
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i16
+   Register : piano_out_I_0/Beeper_inst/time_cnt_1987__i17
+   Register : uart_top_inst/data_buffer__i432
+   Register : uart_top_inst/data_buffer__i0
+   Register : uart_top_inst/data_buffer__i956
+   Register : uart_top_inst/data_buffer__i955
+   Register : uart_top_inst/data_buffer__i954
+   Register : uart_top_inst/data_buffer__i953
+   Register : uart_top_inst/data_buffer__i952
+   Register : uart_top_inst/data_buffer__i948
+   Register : uart_top_inst/data_buffer__i947
+   Register : uart_top_inst/data_buffer__i946
+   Register : uart_top_inst/data_buffer__i945
+   Register : uart_top_inst/data_buffer__i944
+   Register : uart_top_inst/data_buffer__i940
+   Register : uart_top_inst/data_buffer__i939
+
+                                   Page 13
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i938
+   Register : uart_top_inst/data_buffer__i937
+   Register : uart_top_inst/data_buffer__i936
+   Register : uart_top_inst/data_buffer__i932
+   Register : uart_top_inst/data_buffer__i931
+   Register : uart_top_inst/data_buffer__i930
+   Register : uart_top_inst/data_buffer__i929
+   Register : uart_top_inst/data_buffer__i928
+   Register : uart_top_inst/data_buffer__i924
+   Register : uart_top_inst/data_buffer__i923
+   Register : uart_top_inst/data_buffer__i922
+   Register : uart_top_inst/data_buffer__i921
+   Register : uart_top_inst/data_buffer__i920
+   Register : uart_top_inst/data_buffer__i916
+   Register : uart_top_inst/data_buffer__i915
+   Register : uart_top_inst/data_buffer__i914
+   Register : uart_top_inst/data_buffer__i913
+   Register : uart_top_inst/data_buffer__i912
+   Register : uart_top_inst/data_buffer__i908
+   Register : uart_top_inst/data_buffer__i907
+   Register : uart_top_inst/data_buffer__i906
+   Register : uart_top_inst/data_buffer__i905
+   Register : uart_top_inst/data_buffer__i904
+   Register : uart_top_inst/data_buffer__i900
+   Register : uart_top_inst/data_buffer__i899
+   Register : uart_top_inst/data_buffer__i428
+   Register : uart_top_inst/data_buffer__i427
+   Register : uart_top_inst/data_buffer__i898
+   Register : uart_top_inst/data_buffer__i897
+   Register : uart_top_inst/data_buffer__i896
+   Register : uart_top_inst/data_buffer__i892
+   Register : uart_top_inst/data_buffer__i891
+   Register : uart_top_inst/data_buffer__i890
+   Register : uart_top_inst/data_buffer__i889
+   Register : uart_top_inst/data_buffer__i888
+   Register : uart_top_inst/data_buffer__i884
+   Register : uart_top_inst/data_buffer__i883
+   Register : uart_top_inst/data_buffer__i882
+   Register : uart_top_inst/data_buffer__i881
+   Register : uart_top_inst/data_buffer__i880
+   Register : uart_top_inst/data_buffer__i876
+   Register : uart_top_inst/data_buffer__i875
+   Register : uart_top_inst/data_buffer__i874
+   Register : uart_top_inst/data_buffer__i873
+   Register : uart_top_inst/data_buffer__i872
+   Register : uart_top_inst/data_buffer__i868
+   Register : uart_top_inst/data_buffer__i867
+   Register : uart_top_inst/data_buffer__i866
+   Register : uart_top_inst/data_buffer__i865
+   Register : uart_top_inst/data_buffer__i864
+   Register : uart_top_inst/data_buffer__i860
+   Register : uart_top_inst/data_buffer__i859
+   Register : uart_top_inst/data_buffer__i858
+   Register : uart_top_inst/data_buffer__i857
+   Register : uart_top_inst/data_buffer__i856
+   Register : uart_top_inst/data_buffer__i852
+
+                                   Page 14
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i851
+   Register : uart_top_inst/data_buffer__i850
+   Register : uart_top_inst/data_buffer__i849
+   Register : uart_top_inst/data_buffer__i848
+   Register : uart_top_inst/data_buffer__i844
+   Register : uart_top_inst/data_buffer__i843
+   Register : uart_top_inst/data_buffer__i842
+   Register : uart_top_inst/data_buffer__i841
+   Register : uart_top_inst/data_buffer__i840
+   Register : uart_top_inst/data_buffer__i836
+   Register : uart_top_inst/data_buffer__i835
+   Register : uart_top_inst/data_buffer__i834
+   Register : uart_top_inst/data_buffer__i833
+   Register : uart_top_inst/data_buffer__i832
+   Register : uart_top_inst/data_buffer__i828
+   Register : uart_top_inst/data_buffer__i827
+   Register : uart_top_inst/data_buffer__i826
+   Register : uart_top_inst/data_buffer__i825
+   Register : uart_top_inst/data_buffer__i824
+   Register : uart_top_inst/data_buffer__i820
+   Register : uart_top_inst/data_buffer__i819
+   Register : uart_top_inst/data_buffer__i818
+   Register : uart_top_inst/data_buffer__i817
+   Register : uart_top_inst/data_buffer__i816
+   Register : uart_top_inst/data_buffer__i812
+   Register : uart_top_inst/data_buffer__i811
+   Register : uart_top_inst/data_buffer__i810
+   Register : uart_top_inst/data_buffer__i809
+   Register : uart_top_inst/data_buffer__i808
+   Register : uart_top_inst/data_buffer__i804
+   Register : uart_top_inst/data_buffer__i803
+   Register : uart_top_inst/data_buffer__i802
+   Register : uart_top_inst/data_buffer__i801
+   Register : uart_top_inst/data_buffer__i800
+   Register : uart_top_inst/rx_done_64_rep_497
+   Register : uart_top_inst/data_buffer__i796
+   Register : uart_top_inst/data_buffer__i795
+   Register : uart_top_inst/data_buffer__i794
+   Register : uart_top_inst/data_buffer__i793
+   Register : uart_top_inst/data_buffer__i792
+   Register : uart_top_inst/data_buffer__i788
+   Register : uart_top_inst/data_buffer__i787
+   Register : uart_top_inst/data_buffer__i786
+   Register : uart_top_inst/data_buffer__i785
+   Register : uart_top_inst/data_buffer__i784
+   Register : uart_top_inst/data_buffer__i780
+   Register : uart_top_inst/data_buffer__i779
+   Register : uart_top_inst/data_buffer__i778
+   Register : uart_top_inst/data_buffer__i777
+   Register : uart_top_inst/data_buffer__i776
+   Register : uart_top_inst/data_buffer__i772
+   Register : uart_top_inst/data_buffer__i771
+   Register : uart_top_inst/data_buffer__i770
+   Register : uart_top_inst/data_buffer__i769
+   Register : uart_top_inst/data_buffer__i768
+   Register : uart_top_inst/data_buffer__i764
+
+                                   Page 15
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i763
+   Register : uart_top_inst/data_buffer__i762
+   Register : uart_top_inst/data_buffer__i761
+   Register : uart_top_inst/data_buffer__i760
+   Register : uart_top_inst/data_buffer__i756
+   Register : uart_top_inst/data_buffer__i755
+   Register : uart_top_inst/data_buffer__i754
+   Register : uart_top_inst/data_buffer__i753
+   Register : uart_top_inst/data_buffer__i752
+   Register : uart_top_inst/data_buffer__i748
+   Register : uart_top_inst/data_buffer__i747
+   Register : uart_top_inst/data_buffer__i746
+   Register : uart_top_inst/data_buffer__i745
+   Register : uart_top_inst/data_buffer__i744
+   Register : uart_top_inst/data_buffer__i740
+   Register : uart_top_inst/data_buffer__i739
+   Register : uart_top_inst/data_buffer__i738
+   Register : uart_top_inst/data_buffer__i737
+   Register : uart_top_inst/data_buffer__i736
+   Register : uart_top_inst/data_buffer__i732
+   Register : uart_top_inst/data_buffer__i731
+   Register : uart_top_inst/data_buffer__i730
+   Register : uart_top_inst/data_buffer__i729
+   Register : uart_top_inst/data_buffer__i728
+   Register : uart_top_inst/data_buffer__i724
+   Register : uart_top_inst/data_buffer__i723
+   Register : uart_top_inst/data_buffer__i722
+   Register : uart_top_inst/data_buffer__i721
+   Register : uart_top_inst/data_buffer__i720
+   Register : uart_top_inst/data_buffer__i716
+   Register : uart_top_inst/data_buffer__i715
+   Register : uart_top_inst/data_buffer__i714
+   Register : uart_top_inst/data_buffer__i713
+   Register : uart_top_inst/data_buffer__i712
+   Register : uart_top_inst/data_buffer__i708
+   Register : uart_top_inst/data_buffer__i707
+   Register : uart_top_inst/data_buffer__i706
+   Register : uart_top_inst/data_buffer__i705
+   Register : uart_top_inst/data_buffer__i704
+   Register : uart_top_inst/data_buffer__i700
+   Register : uart_top_inst/data_buffer__i699
+   Register : uart_top_inst/data_buffer__i698
+   Register : uart_top_inst/data_buffer__i697
+   Register : uart_top_inst/data_buffer__i696
+   Register : uart_top_inst/data_buffer__i692
+   Register : uart_top_inst/data_buffer__i691
+   Register : uart_top_inst/data_buffer__i690
+   Register : uart_top_inst/data_buffer__i689
+   Register : uart_top_inst/data_buffer__i688
+   Register : uart_top_inst/data_buffer__i684
+   Register : uart_top_inst/data_buffer__i683
+   Register : uart_top_inst/data_buffer__i682
+   Register : uart_top_inst/data_buffer__i681
+   Register : uart_top_inst/data_buffer__i680
+   Register : uart_top_inst/data_buffer__i676
+   Register : uart_top_inst/data_buffer__i675
+
+                                   Page 16
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i674
+   Register : uart_top_inst/data_buffer__i673
+   Register : uart_top_inst/data_buffer__i672
+   Register : uart_top_inst/data_buffer__i668
+   Register : uart_top_inst/data_buffer__i667
+   Register : uart_top_inst/data_buffer__i666
+   Register : uart_top_inst/data_buffer__i665
+   Register : uart_top_inst/data_buffer__i664
+   Register : uart_top_inst/data_buffer__i660
+   Register : uart_top_inst/data_buffer__i659
+   Register : uart_top_inst/data_buffer__i658
+   Register : uart_top_inst/data_buffer__i657
+   Register : uart_top_inst/data_buffer__i656
+   Register : uart_top_inst/data_buffer__i652
+   Register : uart_top_inst/data_buffer__i651
+   Register : uart_top_inst/data_buffer__i650
+   Register : uart_top_inst/data_buffer__i649
+   Register : uart_top_inst/data_buffer__i648
+   Register : uart_top_inst/data_buffer__i644
+   Register : uart_top_inst/data_buffer__i643
+   Register : uart_top_inst/data_buffer__i642
+   Register : uart_top_inst/data_buffer__i641
+   Register : uart_top_inst/data_buffer__i640
+   Register : uart_top_inst/data_buffer__i636
+   Register : uart_top_inst/data_buffer__i635
+   Register : uart_top_inst/data_buffer__i634
+   Register : uart_top_inst/data_buffer__i633
+   Register : uart_top_inst/data_buffer__i632
+   Register : uart_top_inst/data_buffer__i628
+   Register : uart_top_inst/data_buffer__i627
+   Register : uart_top_inst/data_buffer__i626
+   Register : uart_top_inst/data_buffer__i625
+   Register : uart_top_inst/data_buffer__i624
+   Register : uart_top_inst/data_buffer__i620
+   Register : uart_top_inst/data_buffer__i619
+   Register : uart_top_inst/data_buffer__i618
+   Register : uart_top_inst/data_buffer__i617
+   Register : uart_top_inst/data_buffer__i616
+   Register : uart_top_inst/data_buffer__i612
+   Register : uart_top_inst/data_buffer__i611
+   Register : uart_top_inst/data_buffer__i610
+   Register : uart_top_inst/data_buffer__i609
+   Register : uart_top_inst/data_buffer__i608
+   Register : uart_top_inst/data_buffer__i604
+   Register : uart_top_inst/data_buffer__i603
+   Register : uart_top_inst/data_buffer__i602
+   Register : uart_top_inst/data_buffer__i601
+   Register : uart_top_inst/data_buffer__i600
+   Register : uart_top_inst/data_buffer__i596
+   Register : uart_top_inst/data_buffer__i595
+   Register : uart_top_inst/data_buffer__i594
+   Register : uart_top_inst/data_buffer__i593
+   Register : uart_top_inst/data_buffer__i592
+   Register : uart_top_inst/data_buffer__i588
+   Register : uart_top_inst/data_buffer__i587
+   Register : uart_top_inst/data_buffer__i586
+
+                                   Page 17
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i585
+   Register : uart_top_inst/data_buffer__i584
+   Register : uart_top_inst/data_buffer__i580
+   Register : uart_top_inst/data_buffer__i579
+   Register : uart_top_inst/data_buffer__i578
+   Register : uart_top_inst/data_buffer__i577
+   Register : uart_top_inst/data_buffer__i576
+   Register : uart_top_inst/data_buffer__i572
+   Register : uart_top_inst/data_buffer__i571
+   Register : uart_top_inst/data_buffer__i570
+   Register : uart_top_inst/data_buffer__i569
+   Register : uart_top_inst/data_buffer__i568
+   Register : uart_top_inst/data_buffer__i564
+   Register : uart_top_inst/data_buffer__i563
+   Register : uart_top_inst/data_buffer__i562
+   Register : uart_top_inst/data_buffer__i561
+   Register : uart_top_inst/data_buffer__i560
+   Register : uart_top_inst/data_buffer__i556
+   Register : uart_top_inst/data_buffer__i555
+   Register : uart_top_inst/data_buffer__i554
+   Register : uart_top_inst/data_buffer__i553
+   Register : uart_top_inst/data_buffer__i552
+   Register : uart_top_inst/data_buffer__i548
+   Register : uart_top_inst/data_buffer__i547
+   Register : uart_top_inst/data_buffer__i546
+   Register : uart_top_inst/data_buffer__i545
+   Register : uart_top_inst/data_buffer__i544
+   Register : uart_top_inst/data_buffer__i540
+   Register : uart_top_inst/data_buffer__i539
+   Register : uart_top_inst/data_buffer__i538
+   Register : uart_top_inst/data_buffer__i537
+   Register : uart_top_inst/data_buffer__i536
+   Register : uart_top_inst/data_buffer__i532
+   Register : uart_top_inst/data_buffer__i531
+   Register : uart_top_inst/data_buffer__i530
+   Register : uart_top_inst/data_buffer__i529
+   Register : uart_top_inst/data_buffer__i528
+   Register : uart_top_inst/data_buffer__i524
+   Register : uart_top_inst/data_buffer__i523
+   Register : uart_top_inst/data_buffer__i522
+   Register : uart_top_inst/data_buffer__i521
+   Register : uart_top_inst/data_buffer__i520
+   Register : uart_top_inst/data_buffer__i516
+   Register : uart_top_inst/data_buffer__i515
+   Register : uart_top_inst/data_buffer__i514
+   Register : uart_top_inst/data_buffer__i513
+   Register : uart_top_inst/data_buffer__i512
+   Register : uart_top_inst/data_buffer__i508
+   Register : uart_top_inst/data_buffer__i507
+   Register : uart_top_inst/data_buffer__i506
+   Register : uart_top_inst/data_buffer__i505
+   Register : uart_top_inst/data_buffer__i504
+   Register : uart_top_inst/data_buffer__i500
+   Register : uart_top_inst/data_buffer__i499
+   Register : uart_top_inst/data_buffer__i498
+   Register : uart_top_inst/data_buffer__i497
+
+                                   Page 18
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i496
+   Register : uart_top_inst/data_buffer__i492
+   Register : uart_top_inst/data_buffer__i491
+   Register : uart_top_inst/data_buffer__i490
+   Register : uart_top_inst/data_buffer__i489
+   Register : uart_top_inst/data_buffer__i488
+   Register : uart_top_inst/data_buffer__i484
+   Register : uart_top_inst/data_buffer__i483
+   Register : uart_top_inst/data_buffer__i482
+   Register : uart_top_inst/data_buffer__i481
+   Register : uart_top_inst/data_buffer__i480
+   Register : uart_top_inst/data_buffer__i476
+   Register : uart_top_inst/data_buffer__i475
+   Register : uart_top_inst/data_buffer__i474
+   Register : uart_top_inst/data_buffer__i473
+   Register : uart_top_inst/data_buffer__i472
+   Register : uart_top_inst/data_buffer__i468
+   Register : uart_top_inst/data_buffer__i467
+   Register : uart_top_inst/data_buffer__i466
+   Register : uart_top_inst/data_buffer__i465
+   Register : uart_top_inst/data_buffer__i464
+   Register : uart_top_inst/data_buffer__i460
+   Register : uart_top_inst/data_buffer__i459
+   Register : uart_top_inst/data_buffer__i458
+   Register : uart_top_inst/data_buffer__i457
+   Register : uart_top_inst/data_buffer__i456
+   Register : uart_top_inst/data_buffer__i452
+   Register : uart_top_inst/data_buffer__i451
+   Register : uart_top_inst/data_buffer__i450
+   Register : uart_top_inst/data_buffer__i449
+   Register : uart_top_inst/data_buffer__i448
+   Register : uart_top_inst/data_buffer__i444
+   Register : uart_top_inst/data_buffer__i443
+   Register : uart_top_inst/data_buffer__i442
+   Register : uart_top_inst/data_buffer__i441
+   Register : uart_top_inst/data_buffer__i440
+   Register : uart_top_inst/data_buffer__i436
+   Register : uart_top_inst/data_buffer__i435
+   Register : uart_top_inst/data_buffer__i434
+   Register : uart_top_inst/data_buffer__i433
+   Register : uart_top_inst/data_buffer__i426
+   Register : uart_top_inst/data_buffer__i425
+   Register : uart_top_inst/data_buffer__i424
+   Register : uart_top_inst/data_buffer__i420
+   Register : uart_top_inst/data_buffer__i419
+   Register : uart_top_inst/data_buffer__i418
+   Register : uart_top_inst/data_buffer__i417
+   Register : uart_top_inst/data_buffer__i416
+   Register : uart_top_inst/data_buffer__i412
+   Register : uart_top_inst/data_buffer__i411
+   Register : uart_top_inst/data_buffer__i410
+   Register : uart_top_inst/data_buffer__i409
+   Register : uart_top_inst/data_buffer__i408
+   Register : uart_top_inst/data_buffer__i404
+   Register : uart_top_inst/data_buffer__i403
+   Register : uart_top_inst/data_buffer__i402
+
+                                   Page 19
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i401
+   Register : uart_top_inst/data_buffer__i400
+   Register : uart_top_inst/data_buffer__i396
+   Register : uart_top_inst/data_buffer__i395
+   Register : uart_top_inst/data_buffer__i394
+   Register : uart_top_inst/data_buffer__i393
+   Register : uart_top_inst/data_buffer__i392
+   Register : uart_top_inst/data_buffer__i388
+   Register : uart_top_inst/data_buffer__i387
+   Register : uart_top_inst/data_buffer__i386
+   Register : uart_top_inst/data_buffer__i385
+   Register : uart_top_inst/data_buffer__i384
+   Register : uart_top_inst/data_buffer__i380
+   Register : uart_top_inst/data_buffer__i379
+   Register : uart_top_inst/data_buffer__i378
+   Register : uart_top_inst/data_buffer__i377
+   Register : uart_top_inst/data_buffer__i376
+   Register : uart_top_inst/data_buffer__i372
+   Register : uart_top_inst/data_buffer__i371
+   Register : uart_top_inst/data_buffer__i370
+   Register : uart_top_inst/data_buffer__i369
+   Register : uart_top_inst/data_buffer__i368
+   Register : uart_top_inst/data_buffer__i364
+   Register : uart_top_inst/data_buffer__i363
+   Register : uart_top_inst/data_buffer__i362
+   Register : uart_top_inst/data_buffer__i361
+   Register : uart_top_inst/data_buffer__i360
+   Register : uart_top_inst/data_buffer__i356
+   Register : uart_top_inst/data_buffer__i355
+   Register : uart_top_inst/data_buffer__i354
+   Register : uart_top_inst/data_buffer__i353
+   Register : uart_top_inst/data_buffer__i352
+   Register : uart_top_inst/data_buffer__i348
+   Register : uart_top_inst/data_buffer__i347
+   Register : uart_top_inst/data_buffer__i346
+   Register : uart_top_inst/data_buffer__i345
+   Register : uart_top_inst/data_buffer__i344
+   Register : uart_top_inst/data_buffer__i340
+   Register : uart_top_inst/data_buffer__i339
+   Register : uart_top_inst/data_buffer__i338
+   Register : uart_top_inst/data_buffer__i337
+   Register : uart_top_inst/data_buffer__i336
+   Register : uart_top_inst/data_buffer__i332
+   Register : uart_top_inst/data_buffer__i331
+   Register : uart_top_inst/data_buffer__i330
+   Register : uart_top_inst/data_buffer__i329
+   Register : uart_top_inst/data_buffer__i328
+   Register : uart_top_inst/data_buffer__i324
+   Register : uart_top_inst/data_buffer__i323
+   Register : uart_top_inst/data_buffer__i322
+   Register : uart_top_inst/data_buffer__i321
+   Register : uart_top_inst/data_buffer__i320
+   Register : uart_top_inst/data_buffer__i316
+   Register : uart_top_inst/data_buffer__i315
+   Register : uart_top_inst/data_buffer__i314
+   Register : uart_top_inst/data_buffer__i313
+
+                                   Page 20
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i312
+   Register : uart_top_inst/data_buffer__i308
+   Register : uart_top_inst/data_buffer__i307
+   Register : uart_top_inst/data_buffer__i306
+   Register : uart_top_inst/data_buffer__i305
+   Register : uart_top_inst/data_buffer__i304
+   Register : uart_top_inst/data_buffer__i300
+   Register : uart_top_inst/data_buffer__i299
+   Register : uart_top_inst/data_buffer__i298
+   Register : uart_top_inst/data_buffer__i297
+   Register : uart_top_inst/data_buffer__i296
+   Register : uart_top_inst/data_buffer__i292
+   Register : uart_top_inst/data_buffer__i291
+   Register : uart_top_inst/data_buffer__i290
+   Register : uart_top_inst/data_buffer__i289
+   Register : uart_top_inst/data_buffer__i288
+   Register : uart_top_inst/data_buffer__i284
+   Register : uart_top_inst/data_buffer__i283
+   Register : uart_top_inst/data_buffer__i282
+   Register : uart_top_inst/data_buffer__i281
+   Register : uart_top_inst/data_buffer__i280
+   Register : uart_top_inst/data_buffer__i276
+   Register : uart_top_inst/data_buffer__i275
+   Register : uart_top_inst/data_buffer__i274
+   Register : uart_top_inst/data_buffer__i273
+   Register : uart_top_inst/data_buffer__i272
+   Register : uart_top_inst/data_buffer__i268
+   Register : uart_top_inst/data_buffer__i267
+   Register : uart_top_inst/data_buffer__i266
+   Register : uart_top_inst/data_buffer__i265
+   Register : uart_top_inst/data_buffer__i264
+   Register : uart_top_inst/data_buffer__i260
+   Register : uart_top_inst/data_buffer__i259
+   Register : uart_top_inst/data_buffer__i258
+   Register : uart_top_inst/data_buffer__i257
+   Register : uart_top_inst/data_buffer__i256
+   Register : uart_top_inst/data_buffer__i252
+   Register : uart_top_inst/data_buffer__i251
+   Register : uart_top_inst/data_buffer__i250
+   Register : uart_top_inst/data_buffer__i249
+   Register : uart_top_inst/data_buffer__i248
+   Register : uart_top_inst/data_buffer__i244
+   Register : uart_top_inst/data_buffer__i243
+   Register : uart_top_inst/data_buffer__i242
+   Register : uart_top_inst/data_buffer__i241
+   Register : uart_top_inst/data_buffer__i240
+   Register : uart_top_inst/data_buffer__i236
+   Register : uart_top_inst/data_buffer__i235
+   Register : uart_top_inst/data_buffer__i234
+   Register : uart_top_inst/data_buffer__i233
+   Register : uart_top_inst/data_buffer__i232
+   Register : uart_top_inst/data_buffer__i228
+   Register : uart_top_inst/data_buffer__i227
+   Register : uart_top_inst/data_buffer__i226
+   Register : uart_top_inst/data_buffer__i225
+   Register : uart_top_inst/rx_done_64_rep_496
+
+                                   Page 21
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i224
+   Register : uart_top_inst/data_buffer__i220
+   Register : uart_top_inst/data_buffer__i219
+   Register : uart_top_inst/data_buffer__i218
+   Register : uart_top_inst/data_buffer__i217
+   Register : uart_top_inst/data_buffer__i216
+   Register : uart_top_inst/data_buffer__i212
+   Register : uart_top_inst/data_buffer__i211
+   Register : uart_top_inst/data_buffer__i210
+   Register : uart_top_inst/data_buffer__i209
+   Register : uart_top_inst/data_buffer__i208
+   Register : uart_top_inst/data_buffer__i204
+   Register : uart_top_inst/data_buffer__i203
+   Register : uart_top_inst/data_buffer__i202
+   Register : uart_top_inst/data_buffer__i201
+   Register : uart_top_inst/data_buffer__i200
+   Register : uart_top_inst/data_buffer__i196
+   Register : uart_top_inst/data_buffer__i195
+   Register : uart_top_inst/data_buffer__i178
+   Register : uart_top_inst/data_buffer__i179
+   Register : uart_top_inst/data_buffer__i180
+   Register : uart_top_inst/data_buffer__i184
+   Register : uart_top_inst/data_buffer__i185
+   Register : uart_top_inst/data_buffer__i186
+   Register : uart_top_inst/data_buffer__i187
+   Register : uart_top_inst/data_buffer__i188
+   Register : uart_top_inst/data_buffer__i192
+   Register : uart_top_inst/data_buffer__i193
+   Register : uart_top_inst/data_buffer__i194
+   Register : uart_top_inst/data_buffer__i177
+   Register : uart_top_inst/data_buffer__i176
+   Register : uart_top_inst/data_buffer__i172
+   Register : uart_top_inst/data_buffer__i171
+   Register : uart_top_inst/data_buffer__i170
+   Register : uart_top_inst/data_buffer__i169
+   Register : uart_top_inst/data_buffer__i168
+   Register : uart_top_inst/data_buffer__i164
+   Register : uart_top_inst/data_buffer__i163
+   Register : uart_top_inst/data_buffer__i162
+   Register : uart_top_inst/data_buffer__i161
+   Register : uart_top_inst/data_buffer__i160
+   Register : uart_top_inst/data_buffer__i156
+   Register : uart_top_inst/data_buffer__i155
+   Register : uart_top_inst/data_buffer__i154
+   Register : uart_top_inst/data_buffer__i153
+   Register : uart_top_inst/data_buffer__i152
+   Register : uart_top_inst/data_buffer__i148
+   Register : uart_top_inst/data_buffer__i147
+   Register : uart_top_inst/data_buffer__i146
+   Register : uart_top_inst/data_buffer__i145
+   Register : uart_top_inst/data_buffer__i144
+   Register : uart_top_inst/data_buffer__i140
+   Register : uart_top_inst/data_buffer__i139
+   Register : uart_top_inst/data_buffer__i138
+   Register : uart_top_inst/data_buffer__i137
+   Register : uart_top_inst/data_buffer__i136
+
+                                   Page 22
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i132
+   Register : uart_top_inst/data_buffer__i131
+   Register : uart_top_inst/data_buffer__i130
+   Register : uart_top_inst/data_buffer__i129
+   Register : uart_top_inst/data_buffer__i128
+   Register : uart_top_inst/data_buffer__i124
+   Register : uart_top_inst/data_buffer__i123
+   Register : uart_top_inst/data_buffer__i122
+   Register : uart_top_inst/data_buffer__i121
+   Register : uart_top_inst/data_buffer__i120
+   Register : uart_top_inst/data_buffer__i116
+   Register : uart_top_inst/data_buffer__i115
+   Register : uart_top_inst/data_buffer__i114
+   Register : uart_top_inst/data_buffer__i113
+   Register : uart_top_inst/data_buffer__i112
+   Register : uart_top_inst/data_buffer__i108
+   Register : uart_top_inst/data_buffer__i107
+   Register : uart_top_inst/data_buffer__i106
+   Register : uart_top_inst/data_buffer__i105
+   Register : uart_top_inst/data_buffer__i104
+   Register : uart_top_inst/data_buffer__i100
+   Register : uart_top_inst/data_buffer__i99
+   Register : uart_top_inst/data_buffer__i98
+   Register : uart_top_inst/data_buffer__i97
+   Register : uart_top_inst/data_buffer__i96
+   Register : uart_top_inst/data_buffer__i92
+   Register : uart_top_inst/data_buffer__i91
+   Register : uart_top_inst/data_buffer__i90
+   Register : uart_top_inst/data_buffer__i89
+   Register : uart_top_inst/data_buffer__i88
+   Register : uart_top_inst/data_buffer__i84
+   Register : uart_top_inst/data_buffer__i83
+   Register : uart_top_inst/data_buffer__i82
+   Register : uart_top_inst/data_buffer__i81
+   Register : uart_top_inst/data_length__i0
+   Register : uart_top_inst/data_buffer__i80
+   Register : uart_top_inst/data_buffer__i76
+   Register : uart_top_inst/data_buffer__i75
+   Register : uart_top_inst/data_buffer__i74
+   Register : uart_top_inst/data_buffer__i73
+   Register : uart_top_inst/data_buffer__i72
+   Register : uart_top_inst/data_buffer__i68
+   Register : uart_top_inst/data_buffer__i67
+   Register : uart_top_inst/data_buffer__i66
+   Register : uart_top_inst/data_buffer__i65
+   Register : uart_top_inst/data_buffer__i64
+   Register : uart_top_inst/data_buffer__i60
+   Register : uart_top_inst/data_buffer__i59
+   Register : uart_top_inst/data_buffer__i58
+   Register : uart_top_inst/data_buffer__i57
+   Register : uart_top_inst/data_buffer__i56
+   Register : uart_top_inst/data_buffer__i52
+   Register : uart_top_inst/data_buffer__i51
+   Register : uart_top_inst/data_buffer__i50
+   Register : uart_top_inst/data_buffer__i49
+   Register : uart_top_inst/data_buffer__i48
+
+                                   Page 23
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/data_buffer__i44
+   Register : uart_top_inst/data_buffer__i43
+   Register : uart_top_inst/data_buffer__i42
+   Register : uart_top_inst/data_buffer__i41
+   Register : uart_top_inst/data_buffer__i40
+   Register : uart_top_inst/data_buffer__i36
+   Register : uart_top_inst/data_buffer__i35
+   Register : uart_top_inst/data_buffer__i34
+   Register : uart_top_inst/data_buffer__i33
+   Register : uart_top_inst/data_buffer__i32
+   Register : uart_top_inst/data_buffer__i28
+   Register : uart_top_inst/data_buffer__i27
+   Register : uart_top_inst/data_buffer__i26
+   Register : uart_top_inst/data_buffer__i25
+   Register : uart_top_inst/data_buffer__i24
+   Register : uart_top_inst/data_buffer__i20
+   Register : uart_top_inst/data_buffer__i19
+   Register : uart_top_inst/data_buffer__i18
+   Register : uart_top_inst/data_buffer__i17
+   Register : uart_top_inst/data_buffer__i16
+   Register : uart_top_inst/data_buffer__i12
+   Register : uart_top_inst/data_buffer__i11
+   Register : uart_top_inst/data_buffer__i10
+   Register : uart_top_inst/data_buffer__i9
+   Register : uart_top_inst/data_buffer__i8
+   Register : uart_top_inst/data_buffer__i4
+   Register : uart_top_inst/data_buffer__i3
+   Register : uart_top_inst/data_buffer__i2
+   Register : uart_top_inst/data_buffer__i1
+   Register : uart_top_inst/rx_done_64_rep_508
+   Register : uart_top_inst/rx_done_64
+   Register : uart_top_inst/tx_data_length_i1
+   Register : uart_top_inst/rx_done_64_rep_507
+   Register : uart_top_inst/rx_done_64_rep_506
+   Register : uart_top_inst/data_length__i1
+   Register : uart_top_inst/data_length__i2
+   Register : uart_top_inst/data_length__i3
+   Register : uart_top_inst/data_length__i4
+   Register : uart_top_inst/data_length__i5
+   Register : uart_top_inst/data_length__i6
+   Register : uart_top_inst/data_length__i7
+   Register : uart_top_inst/data_length__i8
+   Register : uart_top_inst/data_length__i9
+   Register : uart_top_inst/rx_done_64_rep_505
+   Register : uart_top_inst/rx_done_64_rep_504
+   Register : uart_top_inst/rx_done_64_rep_503
+   Register : uart_top_inst/tx_data_i5
+   Register : uart_top_inst/tx_data_i4
+   Register : uart_top_inst/rx_done_64_rep_502
+   Register : uart_top_inst/rx_done_64_rep_501
+   Register : uart_top_inst/rx_done_64_rep_500
+   Register : uart_top_inst/rx_done_64_rep_499
+   Register : uart_top_inst/rx_done_64_rep_498
+   Register : uart_top_inst/uart_tx_ins/num_1986__i0
+   Register : uart_top_inst/uart_tx_ins/num_1986__i3
+   Register : uart_top_inst/uart_tx_ins/num_1986__i2
+
+                                   Page 24
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+GSR Usage (cont)
+----------------
+   Register : uart_top_inst/uart_tx_ins/num_1986__i1
+   Register : uart_top_inst/uart_rx_ins/num_1984__i0
+   Register : uart_top_inst/uart_rx_ins/ready_62
+   Register : uart_top_inst/uart_rx_ins/num_1984__i3
+   Register : uart_top_inst/uart_rx_ins/num_1984__i2
+   Register : uart_top_inst/uart_rx_ins/num_1984__i1
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i0
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i1
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i2
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i3
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i4
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i5
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i6
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i7
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i8
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i9
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i10
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i11
+   Register : uart_top_inst/baud_tx_ins/cnt_1985__i12
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i0
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i1
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i2
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i3
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i4
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i5
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i6
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i7
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i8
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i9
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i10
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i11
+   Register : uart_top_inst/baud_rx_ins/cnt_1983__i12
+   Register : DS18B20Z_inst/cnt_1mhz_1980__i0
+   Register : DS18B20Z_inst/tamp_out__i4
+   Register : DS18B20Z_inst/cnt_write_i0_i0
+   Register : DS18B20Z_inst/cnt_1mhz_1980__i1
+   Register : DS18B20Z_inst/cnt_1mhz_1980__i2
+   Register : DS18B20Z_inst/cnt_init_i0_i0
+   Register : DS18B20Z_inst/cnt_main_i0_i0
+   Register : DS18B20Z_inst/cnt_read_i0_i2
+   Register : DS18B20Z_inst/cnt_read_i0_i1
+   Register : DS18B20Z_inst/cnt_write_i0_i3
+   Register : DS18B20Z_inst/cnt_write_i0_i2
+   Register : DS18B20Z_inst/cnt_write_i0_i1
+   Register : DS18B20Z_inst/cnt_init_i0_i2
+   Register : DS18B20Z_inst/cnt_init_i0_i1
+   Register : DS18B20Z_inst/cnt_main_i0_i3
+   Register : DS18B20Z_inst/cnt_main_i0_i2
+   Register : DS18B20Z_inst/cnt_main_i0_i1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 75 MB
+
+                                   Page 25
+
+
+
+
+Design:  system_top                                    Date:  02/25/21  11:56:09
+
+Run Time and Memory Usage (cont)
+--------------------------------
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 26
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

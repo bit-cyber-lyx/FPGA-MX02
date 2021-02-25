@@ -1,0 +1,242 @@
+
+map -a "MachXO2" -p LCMXO2-4000HC -t CSBGA132 -s 5 -oc Commercial   "system_impl1.ngd" -o "system_impl1_map.ncd" -pr "system_impl1.prf" -mp "system_impl1.mrp" -lpf "G:/fpga/MXO2/system/project/impl1/system_impl1.lpf" -lpf "G:/fpga/MXO2/system/project/system.lpf" -c 0           
+map:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: system_impl1.ngd
+   Picdevice="LCMXO2-4000HC"
+
+   Pictype="CSBGA132"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2-4000HCCSBGA132, Performance used: 5.
+
+Loading device for application map from file 'xo2c4000.nph' in environment: D:/diamond/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+    <postMsg mid="52011047" type="Warning" dynamic="1" navigation="0" arg0="OLED12832_inst/i21051/GATE"  />
+    <postMsg mid="52011047" type="Warning" dynamic="1" navigation="0" arg0="OLED12832_inst/mux_131_Mux_0_i30/GATE"  />
+    <postMsg mid="52011046" type="Warning" dynamic="1" navigation="0" arg0="2"  />
+
+
+
+Design Summary:
+   Number of registers:   1638 out of  4635 (35%)
+      PFU registers:         1638 out of  4320 (38%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:      1180 out of  2160 (55%)
+      SLICEs as Logic/ROM:   1180 out of  2160 (55%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        135 out of  2160 (6%)
+   Number of LUT4s:        2337 out of  4320 (54%)
+      Number used as logic LUTs:        2067
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      270
+      Number used as shift registers:     0
+   Number of PIO sites used: 28 + 4(JTAG) out of 105 (30%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  3
+     Net clk_c: 865 loads, 865 rising, 0 falling (Driver: PIO clk )
+     Net DS18B20Z_inst/clk_1mhz: 2 loads, 2 rising, 0 falling (Driver: DS18B20Z_inst/clk_1mhz_194 )
+     Net time_generator_inst/clk_5hz: 15 loads, 15 rising, 0 falling (Driver: time_generator_inst/i21483_4_lut )
+   Number of Clock Enables:  91
+     Net clk_c_enable_1433: 2 loads, 2 LSLICEs
+     Net clk_c_enable_132: 1 loads, 1 LSLICEs
+     Net clk_c_enable_1437: 2 loads, 2 LSLICEs
+     Net clk_c_enable_686: 2 loads, 2 LSLICEs
+     Net clk_c_enable_931: 7 loads, 7 LSLICEs
+     Net clk_c_enable_1439: 2 loads, 2 LSLICEs
+     Net clk_c_enable_117: 1 loads, 1 LSLICEs
+     Net clk_c_enable_659: 306 loads, 306 LSLICEs
+     Net clk_c_enable_1399: 6 loads, 6 LSLICEs
+     Net time_generator_inst/time_out_15__N_118: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_11: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_c_enable_682: 13 loads, 13 LSLICEs
+     Net time_generator_inst/clk_c_enable_750: 1 loads, 1 LSLICEs
+     Net time_generator_inst/time_out_23__N_98: 3 loads, 3 LSLICEs
+     Net time_generator_inst/clk_c_enable_118: 1 loads, 1 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_4: 2 loads, 2 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_7: 2 loads, 2 LSLICEs
+     Net time_generator_inst/clk_5hz_enable_14: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1452: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1359: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_690: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_702: 5 loads, 5 LSLICEs
+     Net OLED12832_inst/clk_c_enable_10: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1352: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_114: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1431: 6 loads, 6 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1432: 4 loads, 4 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1446: 4 loads, 4 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1374: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1401: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/clk_c_enable_694: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1421: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1423: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1427: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1436: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/clk_c_enable_1429: 1 loads, 1 LSLICEs
+     Net clk_c_enable_684: 1 loads, 1 LSLICEs
+     Net clk_c_enable_688: 2 loads, 2 LSLICEs
+     Net piano_out_I_0/clk_c_enable_799: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_899: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_950: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1000: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1200: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_849: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1050: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1100: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1150: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1250: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1304: 25 loads, 25 LSLICEs
+     Net piano_out_I_0/clk_c_enable_1414: 26 loads, 26 LSLICEs
+     Net uart_top_inst/clk_c_enable_1418: 3 loads, 3 LSLICEs
+     Net uart_top_inst/bps_en_N_2978: 4 loads, 4 LSLICEs
+     Net uart_top_inst/rx_done_N_2858: 14 loads, 14 LSLICEs
+     Net uart_top_inst/tx_done: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_tx_ins/clk_c_enable_1358: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_tx_ins/clk_c_enable_687: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_743: 4 loads, 4 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1362: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_rx_ins/bps_en_N_2945: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1404: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1406: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1405: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1403: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1379: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1402: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1407: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_rx_ins/clk_c_enable_1408: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/one_wire_N_510: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_748: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_709: 4 loads, 4 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_717: 5 loads, 5 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_736: 10 loads, 10 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_26: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_83: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_86: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_201: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_614: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_545: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_553: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_557: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1416: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_634: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_683: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1420: 3 loads, 3 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1372: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_689: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_747: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1426: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1422: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1447: 1 loads, 1 LSLICEs
+     Net DS18B20Z_inst/clk_c_enable_1371: 1 loads, 1 LSLICEs
+   Number of LSRs:  44
+     Net n25765: 2 loads, 2 LSLICEs
+     Net n20945: 1 loads, 1 LSLICEs
+     Net ready: 1 loads, 1 LSLICEs
+     Net time_generator_inst/n5004: 5 loads, 5 LSLICEs
+     Net time_generator_inst/n5006: 5 loads, 5 LSLICEs
+     Net time_generator_inst/clk_c_enable_750: 13 loads, 13 LSLICEs
+     Net time_generator_inst/cnt_2__N_88: 2 loads, 2 LSLICEs
+     Net time_generator_inst/n5002: 5 loads, 5 LSLICEs
+     Net flag: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/n12055: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/n12049: 5 loads, 5 LSLICEs
+     Net OLED12832_inst/n14556: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12042: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12039: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12024: 2 loads, 2 LSLICEs
+     Net OLED12832_inst/n12017: 9 loads, 9 LSLICEs
+     Net OLED12832_inst/n16664: 1 loads, 1 LSLICEs
+     Net OLED12832_inst/n12019: 3 loads, 3 LSLICEs
+     Net OLED12832_inst/n12116: 1 loads, 1 LSLICEs
+     Net piano_out_I_0/n25588: 13 loads, 13 LSLICEs
+     Net piano_out_I_0/n12089: 3 loads, 3 LSLICEs
+     Net piano_out_I_0/n2025: 10 loads, 10 LSLICEs
+     Net uart_top_inst/n26798: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26802: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26804: 26 loads, 26 LSLICEs
+     Net uart_top_inst/rx_done: 14 loads, 14 LSLICEs
+     Net uart_top_inst/n26803: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26797: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26794: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26799: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26805: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26801: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26800: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26795: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n26796: 26 loads, 26 LSLICEs
+     Net uart_top_inst/n12084: 1 loads, 1 LSLICEs
+     Net uart_top_inst/uart_tx_ins/n12038: 2 loads, 2 LSLICEs
+     Net uart_top_inst/uart_rx_ins/n12037: 2 loads, 2 LSLICEs
+     Net uart_top_inst/baud_tx_ins/cnt_12__N_2896: 7 loads, 7 LSLICEs
+     Net uart_top_inst/baud_rx_ins/cnt_12__N_2896: 7 loads, 7 LSLICEs
+     Net DS18B20Z_inst/n12075: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n12080: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n15328: 2 loads, 2 LSLICEs
+     Net DS18B20Z_inst/n14905: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n26793: 621 loads
+     Net n1359: 331 loads
+     Net n1355: 325 loads
+     Net n1358: 325 loads
+     Net n1357: 308 loads
+     Net clk_c_enable_659: 306 loads
+     Net n1354: 175 loads
+     Net n1356: 94 loads
+     Net OLED12832_inst/cnt_scan_0: 93 loads
+     Net OLED12832_inst/state_0: 83 loads
+ 
+
+   Number of warnings:  3
+   Number of errors:    0
+
+
+
+Total CPU Time: 1 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 75 MB
+
+Dumping design to file system_impl1_map.ncd.
+
+ncd2vdb "system_impl1_map.ncd" ".vdbs/system_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo2c4000.nph' in environment: D:/diamond/diamond/3.11_x64/ispfpga.

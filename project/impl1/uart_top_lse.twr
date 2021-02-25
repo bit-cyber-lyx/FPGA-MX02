@@ -1,0 +1,173 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Feb 23 09:01:40 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     uart_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            811 items scored, 282 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 2.379ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \baud_rx_ins/cnt_63__i3  (from clk_c +)
+   Destination:    FD1S3IX    CD             \baud_rx_ins/cnt_63__i0  (to clk_c +)
+
+   Delay:                   7.233ns  (30.3% logic, 69.7% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.233ns data_path \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.379ns
+
+ Path Details: \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \baud_rx_ins/cnt_63__i3 (from clk_c)
+Route         2   e 1.002                                  \baud_rx_ins/cnt[3]
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i2_3_lut
+Route         2   e 0.954                                  \baud_rx_ins/n681
+LUT4        ---     0.448              A to Z              \baud_rx_ins/i1_4_lut_adj_7
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              B to Z              \uart_rx_ins/i2_4_lut
+Route         1   e 0.788                                  n630
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i1_4_lut_adj_6
+Route        13   e 1.506                                  \baud_rx_ins/cnt_12__N_29
+                  --------
+                    7.233  (30.3% logic, 69.7% route), 5 logic levels.
+
+
+Error:  The following path violates requirements by 2.379ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \baud_rx_ins/cnt_63__i3  (from clk_c +)
+   Destination:    FD1S3IX    CD             \baud_rx_ins/cnt_63__i12  (to clk_c +)
+
+   Delay:                   7.233ns  (30.3% logic, 69.7% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.233ns data_path \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i12 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.379ns
+
+ Path Details: \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i12
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \baud_rx_ins/cnt_63__i3 (from clk_c)
+Route         2   e 1.002                                  \baud_rx_ins/cnt[3]
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i2_3_lut
+Route         2   e 0.954                                  \baud_rx_ins/n681
+LUT4        ---     0.448              A to Z              \baud_rx_ins/i1_4_lut_adj_7
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              B to Z              \uart_rx_ins/i2_4_lut
+Route         1   e 0.788                                  n630
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i1_4_lut_adj_6
+Route        13   e 1.506                                  \baud_rx_ins/cnt_12__N_29
+                  --------
+                    7.233  (30.3% logic, 69.7% route), 5 logic levels.
+
+
+Error:  The following path violates requirements by 2.379ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \baud_rx_ins/cnt_63__i3  (from clk_c +)
+   Destination:    FD1S3IX    CD             \baud_rx_ins/cnt_63__i11  (to clk_c +)
+
+   Delay:                   7.233ns  (30.3% logic, 69.7% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.233ns data_path \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i11 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.379ns
+
+ Path Details: \baud_rx_ins/cnt_63__i3 to \baud_rx_ins/cnt_63__i11
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \baud_rx_ins/cnt_63__i3 (from clk_c)
+Route         2   e 1.002                                  \baud_rx_ins/cnt[3]
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i2_3_lut
+Route         2   e 0.954                                  \baud_rx_ins/n681
+LUT4        ---     0.448              A to Z              \baud_rx_ins/i1_4_lut_adj_7
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              B to Z              \uart_rx_ins/i2_4_lut
+Route         1   e 0.788                                  n630
+LUT4        ---     0.448              C to Z              \baud_rx_ins/i1_4_lut_adj_6
+Route        13   e 1.506                                  \baud_rx_ins/cnt_12__N_29
+                  --------
+                    7.233  (30.3% logic, 69.7% route), 5 logic levels.
+
+Warning: 7.379 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|     7.379 ns|     5 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\baud_rx_ins/cnt_12__N_29               |      13|     104|     36.88%
+                                        |        |        |
+\baud_tx_ins/cnt_12__N_29               |      13|     104|     36.88%
+                                        |        |        |
+\baud_tx_ins/n636                       |       1|     104|     36.88%
+                                        |        |        |
+n630                                    |       1|     104|     36.88%
+                                        |        |        |
+\baud_tx_ins/n5                         |       1|      78|     27.66%
+                                        |        |        |
+n5                                      |       1|      78|     27.66%
+                                        |        |        |
+\uart_rx_ins/n71                        |       2|      60|     21.28%
+                                        |        |        |
+\uart_rx_ins/clk_c_enable_24            |      12|      48|     17.02%
+                                        |        |        |
+\baud_rx_ins/n681                       |       2|      42|     14.89%
+                                        |        |        |
+\baud_tx_ins/n684                       |       2|      42|     14.89%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 282  Score: 344044
+
+Constraints cover  850 paths, 166 nets, and 424 connections (97.0% coverage)
+
+
+Peak memory: 61358080 bytes, TRCE: 2146304 bytes, DLYMAN: 167936 bytes
+CPU_TIME_REPORT: 0 secs 

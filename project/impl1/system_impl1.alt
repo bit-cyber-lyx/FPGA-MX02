@@ -1,0 +1,36 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Feb 24 19:58:38 2021 *
+NOTE DESIGN NAME: system_top *
+NOTE DEVICE NAME: LCMXO2-4000HC-5CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS rs232_rx : C8 : in *
+NOTE PINS key[0] : M13 : in *
+NOTE PINS key[1] : M14 : in *
+NOTE PINS key[2] : N14 : in *
+NOTE PINS rst_n : L14 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS oled_dat : F12 : out *
+NOTE PINS oled_clk : E12 : out *
+NOTE PINS oled_dcn : F13 : out *
+NOTE PINS oled_rst : G12 : out *
+NOTE PINS oled_csn : F14 : out *
+NOTE PINS piano_out : P8 : out *
+NOTE PINS rs232_tx : B8 : out *
+NOTE PINS en : P9 : out *
+NOTE PINS rgb_led2[0] : M3 : out *
+NOTE PINS led[5] : N10 : out *
+NOTE PINS led[6] : N9 : out *
+NOTE PINS one_wire : N7 : inout *
+NOTE PINS rgb_led2[2] : P4 : out *
+NOTE PINS rgb_led1[0] : M2 : out *
+NOTE PINS rgb_led1[1] : N2 : out *
+NOTE PINS rgb_led1[2] : P2 : out *
+NOTE PINS led[0] : N13 : out *
+NOTE PINS led[1] : M12 : out *
+NOTE PINS led[2] : P12 : out *
+NOTE PINS led[3] : M11 : out *
+NOTE PINS led[4] : P11 : out *
+NOTE PINS rgb_led2[1] : N3 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

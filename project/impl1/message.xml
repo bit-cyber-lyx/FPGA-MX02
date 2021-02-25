@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>52011047</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>OLED12832_inst/i21051/GATE</Dynamic>
+        </Message>
+        <Message>
+            <ID>52011047</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>OLED12832_inst/mux_131_Mux_0_i30/GATE</Dynamic>
+        </Message>
+        <Message>
+            <ID>52011046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/system_top.v(1): </Dynamic>
+            <Dynamic>system_top</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/system_top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/system_top.v(37): </Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>7</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/system_top.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/time_generator.v(1): </Dynamic>
+            <Dynamic>time_generator</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/time_generator.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/ds18b20z.v(1): </Dynamic>
+            <Dynamic>DS18B20Z</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/ds18b20z.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(1): </Dynamic>
+            <Dynamic>OLED12832</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/uart_top.v(1): </Dynamic>
+            <Dynamic>uart_top</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/uart_top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/baud_generator.v(1): </Dynamic>
+            <Dynamic>baud_generator</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/baud_generator.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/uart_rx.v(1): </Dynamic>
+            <Dynamic>uart_rx</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/uart_rx.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/uart_tx.v(1): </Dynamic>
+            <Dynamic>uart_tx</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/uart_tx.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/beeper_control.v(1): </Dynamic>
+            <Dynamic>beeper_control</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/beeper_control.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/beeper.v(1): </Dynamic>
+            <Dynamic>Beeper</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/beeper.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(20): </Dynamic>
+            <Dynamic>cmd_0_0</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(20): </Dynamic>
+            <Dynamic>cmd_0_1</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(21): </Dynamic>
+            <Dynamic>mem1_0_0</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(21): </Dynamic>
+            <Dynamic>mem1_0_8</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(22): </Dynamic>
+            <Dynamic>mem2_0_0</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(22): </Dynamic>
+            <Dynamic>mem2_0_5</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\uart_top_inst/uart_tx_ins/tx_data_r</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/oled12832.v(176): </Dynamic>
+            <Dynamic>\OLED12832_inst/y_pl_i0_i0</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/oled12832.v</Navigation>
+            <Navigation>176</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/ds18b20z.v(202): </Dynamic>
+            <Dynamic>\DS18B20Z_inst/tamp_out__i11</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/ds18b20z.v</Navigation>
+            <Navigation>202</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/uart_top.v(59): </Dynamic>
+            <Dynamic>\uart_top_inst/tx_data_i6</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/uart_top.v</Navigation>
+            <Navigation>59</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/uart_tx.v(24): </Dynamic>
+            <Dynamic>\uart_top_inst/uart_tx_ins/tx_data_r__i7</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/uart_tx.v</Navigation>
+            <Navigation>24</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/ds18b20z.v(164): </Dynamic>
+            <Dynamic>\DS18B20Z_inst/data_wr_i0_i0</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/ds18b20z.v</Navigation>
+            <Navigation>164</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>g:/fpga/mxo2/system/project/ds18b20z.v(164): </Dynamic>
+            <Dynamic>\DS18B20Z_inst/data_wr_i0_i2</Dynamic>
+            <Navigation>g:/fpga/mxo2/system/project/ds18b20z.v</Navigation>
+            <Navigation>164</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=DS18B20Z_inst/clk_1mhz loads=17 clock_loads=2</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=DS18B20Z_inst/clk_1mhz loads=17 clock_loads=2</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

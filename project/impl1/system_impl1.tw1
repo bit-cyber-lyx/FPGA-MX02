@@ -1,0 +1,353 @@
+
+Loading design for application trce from file system_impl1_map.ncd.
+Design name: system_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Loading device for application trce from file 'xo2c4000.nph' in environment: D:/diamond/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Wed Feb 24 09:52:08 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o system_impl1.tw1 -gui system_impl1_map.ncd system_impl1.prf 
+Design file:     system_impl1_map.ncd
+Preference file: system_impl1.prf
+Device,speed:    LCMXO2-4000HC,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 123.778000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 6.028ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              OLED12832_inst/char_i1  (from clk_c +)
+   Destination:    FF         Data in        OLED12832_inst/char_reg_i0_i4  (to clk_c +)
+
+   Delay:              13.957ns  (33.6% logic, 66.4% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.957ns physical path delay OLED12832_inst/SLICE_166 to OLED12832_inst/SLICE_171 exceeds
+      8.079ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 7.929ns) by 6.028ns
+
+ Physical Path Details:
+
+      Data path OLED12832_inst/SLICE_166 to OLED12832_inst/SLICE_171:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 *SLICE_166.CLK to */SLICE_166.Q0 OLED12832_inst/SLICE_166 (from clk_c)
+ROUTE        40   e 1.030 */SLICE_166.Q0 to */SLICE_794.A1 OLED12832_inst/char_1
+CTOF_DEL    ---     0.452 */SLICE_794.A1 to */SLICE_794.F1 OLED12832_inst/SLICE_794
+ROUTE         7   e 1.030 */SLICE_794.F1 to */SLICE_745.C1 OLED12832_inst/n6_adj_3213
+CTOF_DEL    ---     0.452 */SLICE_745.C1 to */SLICE_745.F1 OLED12832_inst/SLICE_745
+ROUTE         5   e 1.030 */SLICE_745.F1 to */SLICE_736.C1 OLED12832_inst/n8_adj_3130
+CTOF_DEL    ---     0.452 */SLICE_736.C1 to */SLICE_736.F1 OLED12832_inst/SLICE_736
+ROUTE        37   e 1.030 */SLICE_736.F1 to */SLICE_891.C0 OLED12832_inst/n102947
+CTOF_DEL    ---     0.452 */SLICE_891.C0 to */SLICE_891.F0 OLED12832_inst/SLICE_891
+ROUTE         1   e 1.030 */SLICE_891.F0 to */SLICE_733.A0 OLED12832_inst/n102915
+CTOF_DEL    ---     0.452 */SLICE_733.A0 to */SLICE_733.F0 OLED12832_inst/SLICE_733
+ROUTE         1   e 1.030 */SLICE_733.F0 to */SLICE_711.D0 OLED12832_inst/n88276
+CTOF_DEL    ---     0.452 */SLICE_711.D0 to */SLICE_711.F0 OLED12832_inst/SLICE_711
+ROUTE         1   e 1.030 */SLICE_711.F0 to */SLICE_909.A1 OLED12832_inst/n101436
+CTOF_DEL    ---     0.452 */SLICE_909.A1 to */SLICE_909.F1 OLED12832_inst/SLICE_909
+ROUTE         1   e 1.030 */SLICE_909.F1 to */SLICE_414.B1 OLED12832_inst/n101438
+CTOOFX_DEL  ---     0.661 */SLICE_414.B1 to *LICE_414.OFX0 OLED12832_inst/i19618/SLICE_414
+ROUTE         1   e 1.030 *LICE_414.OFX0 to */SLICE_171.B0 OLED12832_inst/char_reg_7_N_767_4
+CTOF_DEL    ---     0.452 */SLICE_171.B0 to */SLICE_171.F0 OLED12832_inst/SLICE_171
+ROUTE         1   e 0.001 */SLICE_171.F0 to *SLICE_171.DI0 OLED12832_inst/n4263 (to clk_c)
+                  --------
+                   13.957   (33.6% logic, 66.4% route), 10 logic levels.
+
+Warning:  70.887MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "DS18B20Z_inst/clk_1mhz" 293.858000 MHz ;
+            62 items scored, 62 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.358ns (weighted slack = -17.305ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              DS18B20Z_inst/cnt_write_i0_i3  (from clk_c +)
+   Destination:    FF         Data in        DS18B20Z_inst/one_wire_buffer_204  (to DS18B20Z_inst/clk_1mhz +)
+
+   Delay:               5.065ns  (39.0% logic, 61.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.065ns physical path delay DS18B20Z_inst/SLICE_132 to DS18B20Z_inst/SLICE_236 exceeds
+      (delay constraint based on source clock period of 8.079ns and destination clock period of 3.403ns)
+      0.857ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 0.707ns) by 4.358ns
+
+ Physical Path Details:
+
+      Data path DS18B20Z_inst/SLICE_132 to DS18B20Z_inst/SLICE_236:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 *SLICE_132.CLK to */SLICE_132.Q1 DS18B20Z_inst/SLICE_132 (from clk_c)
+ROUTE        14   e 1.030 */SLICE_132.Q1 to   SLICE_915.C0 DS18B20Z_inst/cnt_write_3
+CTOF_DEL    ---     0.452   SLICE_915.C0 to   SLICE_915.F0 SLICE_915
+ROUTE         3   e 1.030   SLICE_915.F0 to */SLICE_473.D0 DS18B20Z_inst/n103035
+CTOOFX_DEL  ---     0.661 */SLICE_473.D0 to *LICE_473.OFX0 DS18B20Z_inst/state_2__I_0_240_i7/SLICE_473
+ROUTE         2   e 1.030 *LICE_473.OFX0 to */SLICE_236.C0 DS18B20Z_inst/one_wire_N_505
+CTOF_DEL    ---     0.452 */SLICE_236.C0 to */SLICE_236.F0 DS18B20Z_inst/SLICE_236
+ROUTE         1   e 0.001 */SLICE_236.F0 to *SLICE_236.DI0 DS18B20Z_inst/one_wire_N_499 (to DS18B20Z_inst/clk_1mhz)
+                  --------
+                    5.065   (39.0% logic, 61.0% route), 4 logic levels.
+
+Warning:  48.291MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 123.778000 MHz ;  |  123.778 MHz|   70.887 MHz|  10 *
+                                        |             |             |
+FREQUENCY NET "DS18B20Z_inst/clk_1mhz"  |             |             |
+293.858000 MHz ;                        |  293.858 MHz|   48.291 MHz|   4 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+OLED12832_inst/n98462                   |       1|    2843|     68.37%
+                                        |        |        |
+n1355                                   |     325|    2038|     49.01%
+                                        |        |        |
+OLED12832_inst/n98236                   |       1|    1522|     36.60%
+                                        |        |        |
+OLED12832_inst/char_1                   |      40|    1332|     32.03%
+                                        |        |        |
+OLED12832_inst/char_2                   |      15|    1307|     31.43%
+                                        |        |        |
+OLED12832_inst/n103052                  |       2|    1208|     29.05%
+                                        |        |        |
+OLED12832_inst/char_reg_7_N_767_3       |       1|    1169|     28.11%
+                                        |        |        |
+OLED12832_inst/n4264                    |       1|    1169|     28.11%
+                                        |        |        |
+n1354                                   |     175|    1114|     26.79%
+                                        |        |        |
+OLED12832_inst/n101411                  |       1|     836|     20.11%
+                                        |        |        |
+OLED12832_inst/char_reg_7_N_767_2       |       1|     672|     16.16%
+                                        |        |        |
+OLED12832_inst/n4265                    |       1|     672|     16.16%
+                                        |        |        |
+OLED12832_inst/n101410                  |       1|     651|     15.66%
+                                        |        |        |
+OLED12832_inst/char_3                   |      16|     640|     15.39%
+                                        |        |        |
+OLED12832_inst/n101450                  |       1|     631|     15.18%
+                                        |        |        |
+OLED12832_inst/n98461                   |       1|     449|     10.80%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 312
+   Covered under: FREQUENCY NET "clk_c" 123.778000 MHz ;
+
+Clock Domain: DS18B20Z_inst/clk_1mhz   Source: DS18B20Z_inst/SLICE_120.Q0   Loads: 13
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "DS18B20Z_inst/clk_1mhz" 293.858000 MHz ;   Transfers: 19
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4158  Score: 15955306
+Cumulative negative slack: 15955306
+
+Constraints cover 40676 paths, 53 nets, and 7127 connections (96.17% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Wed Feb 24 09:52:09 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o system_impl1.tw1 -gui system_impl1_map.ncd system_impl1.prf 
+Design file:     system_impl1_map.ncd
+Preference file: system_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 123.778000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              piano_out_I_0/data_buffer_reg__i133  (from clk_c +)
+   Destination:    FF         Data in        piano_out_I_0/data_buffer_reg__i130  (to clk_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_800 to SLICE_800 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_800 to SLICE_800:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_800.CLK to   SLICE_800.Q1 SLICE_800 (from clk_c)
+ROUTE         1   e 0.199   SLICE_800.Q1 to   SLICE_800.M0 piano_out_I_0/data_buffer_reg_272 (to clk_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "DS18B20Z_inst/clk_1mhz" 293.858000 MHz ;
+            62 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.818ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              DS18B20Z_inst/cnt_init_i0_i1  (from clk_c +)
+   Destination:    FF         Data in        DS18B20Z_inst/i136_211  (to DS18B20Z_inst/clk_1mhz +)
+
+   Delay:               0.805ns  (35.9% logic, 64.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.805ns physical path delay DS18B20Z_inst/SLICE_125 to DS18B20Z_inst/SLICE_148 meets
+      (delay constraint based on source clock period of 8.079ns and destination clock period of 3.403ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.818ns
+
+ Physical Path Details:
+
+      Data path DS18B20Z_inst/SLICE_125 to DS18B20Z_inst/SLICE_148:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_125.CLK to */SLICE_125.Q1 DS18B20Z_inst/SLICE_125 (from clk_c)
+ROUTE        11   e 0.515 */SLICE_125.Q1 to */SLICE_148.A0 DS18B20Z_inst/cnt_init_1
+CTOOFX_DEL  ---     0.156 */SLICE_148.A0 to *LICE_148.OFX0 DS18B20Z_inst/SLICE_148
+ROUTE         1   e 0.001 *LICE_148.OFX0 to *SLICE_148.DI0 DS18B20Z_inst/one_wire_N_510 (to DS18B20Z_inst/clk_1mhz)
+                  --------
+                    0.805   (35.9% logic, 64.1% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 123.778000 MHz ;  |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET "DS18B20Z_inst/clk_1mhz"  |             |             |
+293.858000 MHz ;                        |     0.000 ns|     0.818 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 312
+   Covered under: FREQUENCY NET "clk_c" 123.778000 MHz ;
+
+Clock Domain: DS18B20Z_inst/clk_1mhz   Source: DS18B20Z_inst/SLICE_120.Q0   Loads: 13
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY NET "DS18B20Z_inst/clk_1mhz" 293.858000 MHz ;   Transfers: 19
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 40676 paths, 53 nets, and 7366 connections (99.39% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4158 (setup), 0 (hold)
+Score: 15955306 (setup), 0 (hold)
+Cumulative negative slack: 15955306 (15955306+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

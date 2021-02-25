@@ -1,0 +1,309 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Feb 25 11:55:35 2021
+
+
+Command Line:  synthesis -f system_impl1_lattice.synproj -gui -msgset G:/fpga/MXO2/system/project/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 5.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = system_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p G:/fpga/MXO2/system/project (searchpath added)
+-p D:/diamond/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p G:/fpga/MXO2/system/project/impl1 (searchpath added)
+-p G:/fpga/MXO2/system/project (searchpath added)
+Verilog design file = G:/fpga/MXO2/system/project/system_top.v
+Verilog design file = G:/fpga/MXO2/system/project/DS18B20Z.v
+Verilog design file = G:/fpga/MXO2/system/project/OLED12832.v
+Verilog design file = G:/fpga/MXO2/system/project/time_generator.v
+Verilog design file = G:/fpga/MXO2/system/project/baud_generator.v
+Verilog design file = G:/fpga/MXO2/system/project/beeper_control.v
+Verilog design file = G:/fpga/MXO2/system/project/uart_rx.v
+Verilog design file = G:/fpga/MXO2/system/project/uart_top.v
+Verilog design file = G:/fpga/MXO2/system/project/uart_tx.v
+Verilog design file = G:/fpga/MXO2/system/project/beeper.v
+NGD file = system_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file D:/diamond/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file g:/fpga/mxo2/system/project/system_top.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/ds18b20z.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/oled12832.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/time_generator.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/baud_generator.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/beeper_control.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/uart_rx.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/uart_top.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/uart_tx.v. VERI-1482
+Analyzing Verilog file g:/fpga/mxo2/system/project/beeper.v. VERI-1482
+Analyzing Verilog file D:/diamond/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): system_top
+INFO - synthesis: g:/fpga/mxo2/system/project/system_top.v(1): compiling module system_top. VERI-1018
+WARNING - synthesis: g:/fpga/mxo2/system/project/system_top.v(37): expression size 8 truncated to fit in target size 7. VERI-1209
+INFO - synthesis: g:/fpga/mxo2/system/project/time_generator.v(1): compiling module time_generator. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/ds18b20z.v(1): compiling module DS18B20Z. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/oled12832.v(1): compiling module OLED12832. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/uart_top.v(1): compiling module uart_top. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/baud_generator.v(1): compiling module baud_generator. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/uart_rx.v(1): compiling module uart_rx. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/uart_tx.v(1): compiling module uart_tx. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/beeper_control.v(1): compiling module beeper_control. VERI-1018
+INFO - synthesis: g:/fpga/mxo2/system/project/beeper.v(1): compiling module Beeper. VERI-1018
+Removed duplicate sequential element rgb_led2(3 bit), because it is equivalent to rgb_led1
+
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: D:/diamond/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = system_top.
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(20): Register cmd_0_0 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(20): Register cmd_0_1 is stuck at One. VDB-5014
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(21): Register mem1_0_0 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(21): Register mem1_0_8 is stuck at One. VDB-5014
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(22): Register mem2_0_0 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(22): Register mem2_0_5 is stuck at One. VDB-5014
+Removed duplicate sequential element rgb_led1(1 bit), because it is equivalent to led
+
+
+
+
+WARNING - synthesis: Bit 10 of Register \uart_top_inst/uart_tx_ins/tx_data_r is stuck at Zero
+WARNING - synthesis: g:/fpga/mxo2/system/project/oled12832.v(176): Register \OLED12832_inst/y_pl_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/ds18b20z.v(202): Register \DS18B20Z_inst/tamp_out__i11 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/uart_top.v(59): Register \uart_top_inst/tx_data_i6 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/uart_tx.v(24): Register \uart_top_inst/uart_tx_ins/tx_data_r__i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/ds18b20z.v(164): Register \DS18B20Z_inst/data_wr_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: g:/fpga/mxo2/system/project/ds18b20z.v(164): Register \DS18B20Z_inst/data_wr_i0_i2 is stuck at One. VDB-5014
+GSR instance connected to net rst_n_c.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i19 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i17.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i16 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i19.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_i0_i7 is a one-to-one match with \DS18B20Z_inst/data_wr_i0_i3.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_i0_i5 is a one-to-one match with \DS18B20Z_inst/data_wr_i0_i4.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_i0_i1 is a one-to-one match with \DS18B20Z_inst/data_wr_i0_i5.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i14 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i16.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i13 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i14.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i12 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i13.
+Duplicate register/latch removal. \DS18B20Z_inst/num_delay_i0_i8 is a one-to-one match with \DS18B20Z_inst/num_delay_i0_i7.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_buffer_i0_i7 is a one-to-one match with \DS18B20Z_inst/data_wr_buffer_i0_i3.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_buffer_i0_i5 is a one-to-one match with \DS18B20Z_inst/data_wr_buffer_i0_i1.
+Duplicate register/latch removal. \DS18B20Z_inst/data_wr_buffer_i0_i4 is a one-to-one match with \DS18B20Z_inst/data_wr_buffer_i0_i5.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in system_top_drc.log.
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/diamond/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file system_impl1.ngd.
+
+################### Begin Area Report (system_top)######################
+Number of register bits => 1638 of 4635 (35 % )
+BB => 1
+CCU2D => 135
+FD1P3AX => 722
+FD1P3AY => 7
+FD1P3IX => 771
+FD1S3AX => 55
+FD1S3AY => 11
+FD1S3IX => 72
+GSR => 1
+IB => 6
+L6MUX21 => 17
+LUT4 => 1714
+OB => 21
+PFUMX => 132
+ROM128X1A => 42
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : clk_c, loads : 1612
+  Net : time_generator_inst/clk_5hz, loads : 24
+  Net : DS18B20Z_inst/clk_1mhz, loads : 17
+Clock Enable Nets
+Number of Clock Enables: 91
+Top 10 highest fanout Clock Enables:
+  Net : piano_out_I_0/clk_c_enable_899, loads : 50
+  Net : piano_out_I_0/clk_c_enable_950, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1000, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1050, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1100, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1150, loads : 50
+  Net : piano_out_I_0/clk_c_enable_799, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1200, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1414, loads : 50
+  Net : piano_out_I_0/clk_c_enable_1250, loads : 50
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : uart_top_inst/n26793, loads : 620
+  Net : clk_c_enable_659, loads : 601
+  Net : piano_out_I_0/clk_c_enable_849, loads : 100
+  Net : piano_out_I_0/clk_c_enable_1304, loads : 100
+  Net : OLED12832_inst/cnt_scan_0, loads : 93
+  Net : OLED12832_inst/state_0, loads : 83
+  Net : DS18B20Z_inst/state_back_2_N_261_2, loads : 70
+  Net : OLED12832_inst/state_2, loads : 64
+  Net : OLED12832_inst/state_3, loads : 62
+  Net : OLED12832_inst/cnt_scan_1, loads : 59
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets                          |             |             |
+\time_generator_inst/clk_5hz]           |  200.000 MHz|   94.643 MHz|     7 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_1mhz]                |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   63.727 MHz|    11 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 124.754  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 16.859  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
